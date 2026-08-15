@@ -1,0 +1,31 @@
+{
+  "_comment": "Catalogo dei plugin installabili — versione VIVA, letta dai tool installati. Modificando questo file si aggiungono plugin o si cambiano le fonti senza pubblicare una nuova versione. Contiene SOLO link: i file si scaricano dalla fonte originale, non li ridistribuiamo. Le descrizioni sono testo per lingua, non chiavi i18n, perché un plugin aggiunto da remoto non avrebbe la sua chiave nei tool già installati.",
+  "Plugins": [
+    {
+      "Id": "l4dtoolz",
+      "Name": "L4DToolZ",
+      "Desc": {
+        "it": "Sblocca gli slot oltre il limite del gioco (4 in campagna, 8 in versus)",
+        "en": "Unlocks player slots beyond the game's limit (4 in campaign, 8 in versus)",
+        "de": "Öffnet Slots über das Spiellimit hinaus (4 Kampagne, 8 Versus)",
+        "fr": "Débloque des places au-delà de la limite du jeu (4 en campagne, 8 en versus)"
+      },
+      "Author": "Accelerator74",
+      "Page": "https://github.com/accelerator74/l4dtoolz",
+      "Kind": "metamod",
+      "NeedsConfig": true,
+      "Steps": [
+        {
+          "Type": "github_release",
+          "Repo": "accelerator74/l4dtoolz",
+          "AssetMatch": {
+            "windows": "l4d2-win",
+            "linux": "l4d2-linux"
+          },
+          "Extract": "game",
+          "Comment": "L'archivio contiene già addons/l4dtoolz/ e addons/metamod/: si estrae nella cartella del gioco e ogni file va al suo posto. Fork mantenuto (ultimo aggiornamento 2026-07); l'originale ivailosp è fermo al 2017."
+        }
+      ]
+    }
+  ]
+}

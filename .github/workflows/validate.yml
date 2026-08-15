@@ -1,0 +1,91 @@
+name: validate catalogue
+
+# A broken catalogue fails silently: installed tools fall back to their cached
+# or built-in copy, so the change simply never reaches anyone and nothing looks
+# wrong. This job is what turns that into a visible failure, here, before it
+# ships.
+on:
+  push:
+    paths: ["plugins-*.json"]
+  pull_request:
+    paths: ["plugins-*.json"]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check every catalogue file
+        run: |
+          python3 - <<'PY'
+          import glob, json, sys
+
+          KNOWN_STEPS = {"github_release", "url", "asset"}
+          problems = []
+
+          files = sorted(glob.glob("plugins-*.json"))
+          if not files:
+              problems.append("no plugins-*.json file found")
+
+          for path in files:
+              try:
+                  with open(path, encoding="utf-8") as fh:
+                      doc = json.load(fh)
+              except Exception as exc:
+                  problems.append(f"{path}: invalid JSON — {exc}")
+                  continue
+
+              entries = doc.get("Plugins")
+              if not isinstance(entries, list):
+                  problems.append(f"{path}: missing top-level \"Plugins\" array")
+                  continue
+
+              seen = set()
+              for i, e in enumerate(entries):
+                  where = f"{path}[{i}]"
+                  pid = e.get("Id")
+                  if not pid:
+                      problems.append(f"{where}: missing Id")
+                  elif pid in seen:
+                      problems.append(f"{where}: duplicate Id {pid!r}")
+                  else:
+                      seen.add(pid)
+
+                  if not e.get("Name"):
+                      problems.append(f"{where}: missing Name")
+
+                  desc = e.get("Desc")
+                  if not isinstance(desc, dict) or not desc.get("en"):
+                      problems.append(f"{where}: Desc must be an object with at least \"en\"")
+
+                  steps = e.get("Steps")
+                  if not isinstance(steps, list) or not steps:
+                      problems.append(f"{where}: Steps must be a non-empty array")
+                      continue
+
+                  for j, s in enumerate(steps):
+                      sw = f"{where}.Steps[{j}]"
+                      t = s.get("Type")
+                      if t not in KNOWN_STEPS:
+                          problems.append(f"{sw}: unknown Type {t!r} (known: {sorted(KNOWN_STEPS)})")
+                          continue
+                      if t == "github_release" and not s.get("Repo"):
+                          problems.append(f"{sw}: github_release needs Repo")
+                      if t == "url" and not s.get("URL"):
+                          problems.append(f"{sw}: url needs URL")
+                      if t == "asset" and not s.get("From"):
+                          problems.append(f"{sw}: asset needs From")
+                      # Everything that is not an archive must say where it lands.
+                      if not s.get("Extract") and not s.get("Dest"):
+                          problems.append(f"{sw}: needs either Extract or Dest")
+
+          if problems:
+              print("Catalogue rejected:\n")
+              for p in problems:
+                  print(f"  - {p}")
+              sys.exit(1)
+
+          print(f"OK — {len(files)} file(s), {sum(len(json.load(open(f, encoding='utf-8'))['Plugins']) for f in files)} plugin(s)")
+          PY
