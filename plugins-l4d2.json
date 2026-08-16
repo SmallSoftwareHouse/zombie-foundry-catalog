@@ -50,37 +50,28 @@
         "fr": "Commandes pour se mettre en pause comme spectateur et changer d'équipe"
       },
       "Long": {
-        "it": "Aggiunge i comandi con cui un giocatore si mette in pausa come spettatore e rientra, o passa fra sopravvissuti e infetti, senza i cambi di squadra abusivi che il gioco lascerebbe fare.",
-        "en": "Adds the commands a player uses to step away as a spectator and come back, or to move between survivors and infected, without the team-switch abuse the game would otherwise allow.",
-        "de": "Fügt die Befehle hinzu, mit denen ein Spieler als Zuschauer pausiert und zurückkehrt oder zwischen Überlebenden und Infizierten wechselt — ohne den Teamwechsel-Missbrauch, den das Spiel sonst zulässt.",
-        "fr": "Ajoute les commandes permettant à un joueur de se mettre en pause comme spectateur puis de revenir, ou de passer entre survivants et infectés, sans les abus de changement d'équipe que le jeu autoriserait."
+        "it": "Aggiunge i comandi con cui un giocatore si mette in pausa come spettatore e rientra, o passa fra sopravvissuti e infetti, senza dover uscire dalla partita.",
+        "en": "Adds the commands a player uses to step away as a spectator and come back, or to move between survivors and infected, without leaving the game.",
+        "de": "Fügt die Befehle hinzu, mit denen ein Spieler als Zuschauer pausiert und zurückkehrt oder zwischen Überlebenden und Infizierten wechselt, ohne das Spiel zu verlassen.",
+        "fr": "Ajoute les commandes permettant à un joueur de se mettre en pause comme spectateur puis de revenir, ou de passer entre survivants et infectés, sans quitter la partie."
       },
       "Hint": {
-        "it": "Va insieme a L4DToolZ: serve prima avere i posti, poi questo li gestisce.",
-        "en": "Goes with L4DToolZ: the slots come first, this manages who sits in them.",
-        "de": "Gehört zu L4DToolZ: erst die Plätze, dann verwaltet dies, wer darauf sitzt.",
-        "fr": "Va avec L4DToolZ : d'abord les places, ensuite ceci gère qui les occupe."
+        "it": "Non ha impostazioni: i comandi funzionano appena installato (!afk, !survivors, !infected).",
+        "en": "No settings: the commands work as soon as it is installed (!afk, !survivors, !infected).",
+        "de": "Keine Einstellungen: die Befehle funktionieren sofort nach der Installation (!afk, !survivors, !infected).",
+        "fr": "Aucun réglage : les commandes fonctionnent dès l'installation (!afk, !survivors, !infected)."
       },
-      "Author": "fbef0102",
-      "Page": "https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d_afk_commands",
+      "Version": "1.1",
+      "Author": "MasterMe",
+      "Page": "https://forums.alliedmods.net/showthread.php?t=122476",
       "Kind": "sourcemod",
       "NeedsConfig": false,
       "Steps": [
         {
           "Type": "url",
-          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_afk_commands/plugins/l4d_afk_commands.smx",
-          "Dest": "addons/sourcemod/plugins/l4d_afk_commands.smx"
-        },
-        {
-          "Type": "url",
-          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_afk_commands/gamedata/l4d_afk_commands.txt",
-          "Dest": "addons/sourcemod/gamedata/l4d_afk_commands.txt",
-          "Comment": "Senza la gamedata il plugin fallisce il caricamento: è il passo che chi installa a mano dimentica."
-        },
-        {
-          "Type": "url",
-          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_afk_commands/translations/l4d_afk_commands.phrases.txt",
-          "Dest": "addons/sourcemod/translations/l4d_afk_commands.phrases.txt"
+          "URL": "https://www.sourcemod.net/vbcompiler.php?file_id=62568",
+          "Dest": "addons/sourcemod/plugins/l4d_afk_commands.smx",
+          "Comment": "Pulsante 'Get Plugin' del thread dell'autore: l'allegato è il sorgente e questo endpoint ne restituisce lo .smx compilato (gli allegati di AlliedModders sono dietro Cloudflare, questo no). È la versione che spiega il tutorial. Il seguito mantenuto (fbef0102/l4d_afk_commands, v5.7) fa molto di più ma richiede left4dhooks e l'estensione Actions: sta in TODO come candidato per quando il catalogo saprà gestire le dipendenze."
         }
       ]
     },
