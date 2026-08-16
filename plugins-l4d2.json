@@ -10,6 +10,19 @@
         "de": "Öffnet Slots über das Spiellimit hinaus (4 Kampagne, 8 Versus)",
         "fr": "Débloque des places au-delà de la limite du jeu (4 en campagne, 8 en versus)"
       },
+      "Long": {
+        "it": "Toglie il limite di giocatori imposto dal gioco: senza, un server in campagna si ferma a 4 posti e in versus a 8, qualunque cosa scriva la configurazione.",
+        "en": "Removes the player limit the game imposes: without it a campaign server stops at 4 slots and a versus one at 8, whatever the configuration says.",
+        "de": "Hebt das Spielerlimit des Spiels auf: ohne ihn bleibt ein Kampagnen-Server bei 4 Plätzen und ein Versus-Server bei 8, egal was konfiguriert ist.",
+        "fr": "Supprime la limite de joueurs imposée par le jeu : sans lui, un serveur campagne s'arrête à 4 places et un serveur versus à 8, quelle que soit la configuration."
+      },
+      "Hint": {
+        "it": "Serve solo se vuoi più di 4 posti. Imposta il numero dopo l'installazione.",
+        "en": "Only needed if you want more than 4 slots. Set the number after installing.",
+        "de": "Nur nötig für mehr als 4 Plätze. Die Zahl wird nach der Installation gesetzt.",
+        "fr": "Utile seulement au-delà de 4 places. Réglez le nombre après l'installation."
+      },
+      "Version": "2.2.0",
       "Author": "Accelerator74",
       "Page": "https://github.com/accelerator74/l4dtoolz",
       "Kind": "metamod",
