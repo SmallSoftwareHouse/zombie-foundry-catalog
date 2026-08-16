@@ -39,6 +39,90 @@
           "Comment": "L'archivio contiene già addons/l4dtoolz/ e addons/metamod/: si estrae nella cartella del gioco e ogni file va al suo posto. Fork mantenuto (ultimo aggiornamento 2026-07); l'originale ivailosp è fermo al 2017."
         }
       ]
+    },
+    {
+      "Id": "afkjointeam",
+      "Name": "AFK and Join Team",
+      "Desc": {
+        "it": "Comandi per mettersi in pausa come spettatore e cambiare squadra",
+        "en": "Commands to go idle as a spectator and to switch team",
+        "de": "Befehle für Zuschauerpause und Teamwechsel",
+        "fr": "Commandes pour se mettre en pause comme spectateur et changer d'équipe"
+      },
+      "Long": {
+        "it": "Aggiunge i comandi con cui un giocatore si mette in pausa come spettatore e rientra, o passa fra sopravvissuti e infetti, senza i cambi di squadra abusivi che il gioco lascerebbe fare.",
+        "en": "Adds the commands a player uses to step away as a spectator and come back, or to move between survivors and infected, without the team-switch abuse the game would otherwise allow.",
+        "de": "Fügt die Befehle hinzu, mit denen ein Spieler als Zuschauer pausiert und zurückkehrt oder zwischen Überlebenden und Infizierten wechselt — ohne den Teamwechsel-Missbrauch, den das Spiel sonst zulässt.",
+        "fr": "Ajoute les commandes permettant à un joueur de se mettre en pause comme spectateur puis de revenir, ou de passer entre survivants et infectés, sans les abus de changement d'équipe que le jeu autoriserait."
+      },
+      "Hint": {
+        "it": "Va insieme a L4DToolZ: serve prima avere i posti, poi questo li gestisce.",
+        "en": "Goes with L4DToolZ: the slots come first, this manages who sits in them.",
+        "de": "Gehört zu L4DToolZ: erst die Plätze, dann verwaltet dies, wer darauf sitzt.",
+        "fr": "Va avec L4DToolZ : d'abord les places, ensuite ceci gère qui les occupe."
+      },
+      "Author": "fbef0102",
+      "Page": "https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d_afk_commands",
+      "Kind": "sourcemod",
+      "NeedsConfig": false,
+      "Steps": [
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_afk_commands/plugins/l4d_afk_commands.smx",
+          "Dest": "addons/sourcemod/plugins/l4d_afk_commands.smx"
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_afk_commands/gamedata/l4d_afk_commands.txt",
+          "Dest": "addons/sourcemod/gamedata/l4d_afk_commands.txt",
+          "Comment": "Senza la gamedata il plugin fallisce il caricamento: è il passo che chi installa a mano dimentica."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_afk_commands/translations/l4d_afk_commands.phrases.txt",
+          "Dest": "addons/sourcemod/translations/l4d_afk_commands.phrases.txt"
+        }
+      ]
+    },
+    {
+      "Id": "weaponspawner",
+      "Name": "Weapon Spawner",
+      "Desc": {
+        "it": "Menu per far comparire armi, oggetti e infetti speciali",
+        "en": "Menu to spawn weapons, items and special infected",
+        "de": "Menü zum Erzeugen von Waffen, Gegenständen und Spezialinfizierten",
+        "fr": "Menu pour faire apparaître armes, objets et infectés spéciaux"
+      },
+      "Long": {
+        "it": "Dà agli amministratori un menu in gioco per far comparire armi, munizioni, oggetti e infetti speciali nel punto in cui stanno guardando. Utile per provare una mappa o per partite personalizzate.",
+        "en": "Gives admins an in-game menu to spawn weapons, ammo, items and special infected wherever they are looking. Useful for testing a map or for custom matches.",
+        "de": "Gibt Admins ein Menü im Spiel, um Waffen, Munition, Gegenstände und Spezialinfizierte dort erscheinen zu lassen, wohin sie schauen. Nützlich zum Testen einer Karte oder für eigene Partien.",
+        "fr": "Donne aux administrateurs un menu en jeu pour faire apparaître armes, munitions, objets et infectés spéciaux là où ils regardent. Utile pour tester une carte ou pour des parties personnalisées."
+      },
+      "Hint": {
+        "it": "Solo per amministratori. Le sue impostazioni compaiono dopo il primo avvio.",
+        "en": "Admins only. Its settings appear after the first server start.",
+        "de": "Nur für Admins. Die Einstellungen erscheinen nach dem ersten Serverstart.",
+        "fr": "Réservé aux administrateurs. Ses réglages apparaissent après le premier démarrage."
+      },
+      "Author": "Zuko & McFlurry",
+      "Page": "https://forums.alliedmods.net/showthread.php?p=993960",
+      "Kind": "sourcemod",
+      "NeedsConfig": false,
+      "Steps": [
+        {
+          "Type": "url",
+          "URL": "https://www.sourcemod.net/vbcompiler.php?file_id=75681",
+          "Dest": "addons/sourcemod/plugins/l4d2_weaponspawner.smx",
+          "Comment": "È il pulsante 'Get Plugin' del forum: restituisce lo .smx già compilato. Gli allegati di AlliedModders sono dietro Cloudflare e non sono scaricabili da un programma, questo endpoint sì."
+        },
+        {
+          "Type": "asset",
+          "From": "weaponspawner.phrases.txt",
+          "Dest": "addons/sourcemod/translations/weaponspawner.phrases.txt",
+          "Comment": "Il plugin chiama LoadTranslations(\"weaponspawner.phrases\") ma il file non è allegato al post: esiste solo in inglese, fermo al 2010. Questo lo abbiamo scritto noi in 4 lingue con le stesse chiavi."
+        }
+      ]
     }
   ]
 }
