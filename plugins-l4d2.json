@@ -5,22 +5,22 @@
       "Id": "l4dtoolz",
       "Name": "L4DToolZ",
       "Desc": {
-        "it": "Sblocca gli slot oltre il limite del gioco (4 in campagna, 8 in versus)",
-        "en": "Unlocks player slots beyond the game's limit (4 in campaign, 8 in versus)",
-        "de": "Öffnet Slots über das Spiellimit hinaus (4 Kampagne, 8 Versus)",
-        "fr": "Débloque des places au-delà de la limite du jeu (4 en campagne, 8 en versus)"
+        "it": "Decidi tu quanti posti ha il server, fino a 32",
+        "en": "You decide how many slots the server has, up to 32",
+        "de": "Du bestimmst die Platzzahl des Servers, bis zu 32",
+        "fr": "C'est toi qui décides le nombre de places du serveur, jusqu'à 32"
       },
       "Long": {
-        "it": "Toglie il limite di giocatori imposto dal gioco: senza, un server in campagna si ferma a 4 posti e in versus a 8, qualunque cosa scriva la configurazione.",
-        "en": "Removes the player limit the game imposes: without it a campaign server stops at 4 slots and a versus one at 8, whatever the configuration says.",
-        "de": "Hebt das Spielerlimit des Spiels auf: ohne ihn bleibt ein Kampagnen-Server bei 4 Plätzen und ein Versus-Server bei 8, egal was konfiguriert ist.",
-        "fr": "Supprime la limite de joueurs imposée par le jeu : sans lui, un serveur campagne s'arrête à 4 places et un serveur versus à 8, quelle que soit la configuration."
+        "it": "Il gioco fissa i posti e la configurazione non può cambiarli: 4 in campagna, 8 in versus. Questo plugin aggiunge sv_maxplayers, con cui il numero lo scegli tu da 1 a 32, e sv_force_unreserved, che rende il server raggiungibile scrivendo direttamente il suo indirizzo invece che solo passando dalla lobby di Steam. Non ha comandi in gioco: si governa da queste due impostazioni, che il tool scrive in server.cfg per te.",
+        "en": "The game fixes the number of slots and no configuration can change it: 4 in campaign, 8 in versus. This plugin adds sv_maxplayers, which lets you pick the number yourself from 1 to 32, and sv_force_unreserved, which makes the server reachable by typing its address directly instead of only through the Steam lobby. It has no in-game commands: it is driven by those two settings, which the tool writes into server.cfg for you.",
+        "de": "Das Spiel legt die Platzzahl fest, und keine Konfiguration ändert das: 4 in der Kampagne, 8 im Versus. Dieses Plugin fügt sv_maxplayers hinzu, womit du die Zahl selbst von 1 bis 32 wählst, und sv_force_unreserved, das den Server direkt über seine Adresse erreichbar macht statt nur über die Steam-Lobby. Es hat keine Befehle im Spiel: es wird über diese zwei Einstellungen gesteuert, die das Programm für dich in server.cfg schreibt.",
+        "fr": "Le jeu fixe le nombre de places et aucune configuration ne peut le changer : 4 en campagne, 8 en versus. Ce plugin ajoute sv_maxplayers, qui te laisse choisir le nombre toi-même de 1 à 32, et sv_force_unreserved, qui rend le serveur joignable en tapant son adresse directement au lieu de passer seulement par le lobby Steam. Il n'a aucune commande en jeu : il se pilote avec ces deux réglages, que l'outil écrit dans server.cfg pour toi."
       },
       "Hint": {
-        "it": "Serve solo se vuoi più di 4 posti. Imposta il numero dopo l'installazione.",
-        "en": "Only needed if you want more than 4 slots. Set the number after installing.",
-        "de": "Nur nötig für mehr als 4 Plätze. Die Zahl wird nach der Installation gesetzt.",
-        "fr": "Utile seulement au-delà de 4 places. Réglez le nombre après l'installation."
+        "it": "sv_force_unreserved non è neutro: acceso, fa entrare chi scrive l'indirizzo del server, ma toglie il server dal matchmaking. Accendilo se giochi con gente che inviti tu, lascialo spento se aspetti giocatori a caso.",
+        "en": "sv_force_unreserved is not neutral: switched on it lets people in by address, but it takes the server out of matchmaking. Turn it on if you play with people you invite, leave it off if you expect random players.",
+        "de": "sv_force_unreserved ist nicht neutral: eingeschaltet lässt es Leute über die Adresse herein, nimmt den Server aber aus dem Matchmaking. Schalte es ein, wenn du mit eingeladenen Leuten spielst, lass es aus, wenn du zufällige Spieler erwartest.",
+        "fr": "sv_force_unreserved n'est pas neutre : activé, il laisse entrer par l'adresse, mais il retire le serveur du matchmaking. Active-le si tu joues avec des gens que tu invites, laisse-le éteint si tu attends des joueurs au hasard."
       },
       "Version": "2.2.0",
       "Author": "Accelerator74",
@@ -56,11 +56,56 @@
         "fr": "Ajoute les commandes permettant à un joueur de se mettre en pause comme spectateur puis de revenir, ou de passer entre survivants et infectés, sans quitter la partie."
       },
       "Hint": {
-        "it": "Non ha impostazioni: i comandi funzionano appena installato (!afk, !survivors, !infected).",
-        "en": "No settings: the commands work as soon as it is installed (!afk, !survivors, !infected).",
-        "de": "Keine Einstellungen: die Befehle funktionieren sofort nach der Installation (!afk, !survivors, !infected).",
-        "fr": "Aucun réglage : les commandes fonctionnent dès l'installation (!afk, !survivors, !infected)."
+        "it": "Non ha impostazioni e funziona appena installato. I comandi si scrivono in chat (tasto Y) con il punto esclamativo; in console sono gli stessi con sm_ al posto del punto esclamativo.",
+        "en": "No settings, and it works as soon as it is installed. The commands are typed in chat (Y key) with an exclamation mark; in the console they are the same, with sm_ in place of the mark.",
+        "de": "Keine Einstellungen, und es funktioniert sofort nach der Installation. Die Befehle tippt man im Chat (Taste Y) mit Ausrufezeichen; in der Konsole heißen sie gleich, nur mit sm_ statt des Zeichens.",
+        "fr": "Aucun réglage, et il fonctionne dès l'installation. Les commandes se tapent dans le chat (touche Y) avec un point d'exclamation ; dans la console ce sont les mêmes, avec sm_ à la place."
       },
+      "Usage": [
+        {
+          "Cmd": "!afk",
+          "Alt": [
+            "!away",
+            "!idle",
+            "!spectate",
+            "!spectators",
+            "!joinspectators",
+            "!jointeam1"
+          ],
+          "What": {
+            "it": "Ti sposta fra gli spettatori senza farti uscire dalla partita. Per rientrare usa uno dei due comandi di squadra qui sotto.",
+            "en": "Moves you to the spectators without dropping you out of the game. To come back, use one of the two team commands below.",
+            "de": "Setzt dich zu den Zuschauern, ohne dich aus dem Spiel zu werfen. Zum Zurückkommen einen der beiden Team-Befehle unten benutzen.",
+            "fr": "Te place parmi les spectateurs sans te faire quitter la partie. Pour revenir, utilise une des deux commandes d'équipe ci-dessous."
+          }
+        },
+        {
+          "Cmd": "!survivors",
+          "Alt": [
+            "!joinsurvivors",
+            "!jointeam2"
+          ],
+          "What": {
+            "it": "Ti fa entrare fra i sopravvissuti, se c'è posto.",
+            "en": "Puts you with the survivors, if there is room.",
+            "de": "Setzt dich zu den Überlebenden, wenn Platz ist.",
+            "fr": "Te fait rejoindre les survivants, s'il y a de la place."
+          }
+        },
+        {
+          "Cmd": "!infected",
+          "Alt": [
+            "!joininfected",
+            "!jointeam3"
+          ],
+          "What": {
+            "it": "Ti fa entrare fra gli infetti, se c'è posto.",
+            "en": "Puts you with the infected, if there is room.",
+            "de": "Setzt dich zu den Infizierten, wenn Platz ist.",
+            "fr": "Te fait rejoindre les infectés, s'il y a de la place."
+          }
+        }
+      ],
       "Version": "1.1",
       "Author": "MasterMe",
       "Page": "https://forums.alliedmods.net/showthread.php?t=122476",
@@ -91,11 +136,86 @@
         "fr": "Donne aux administrateurs un menu en jeu pour faire apparaître armes, munitions, objets et infectés spéciaux là où ils regardent. Utile pour tester une carte ou pour des parties personnalisées."
       },
       "Hint": {
-        "it": "Solo per amministratori. Le sue impostazioni compaiono dopo il primo avvio.",
-        "en": "Admins only. Its settings appear after the first server start.",
-        "de": "Nur für Admins. Die Einstellungen erscheinen nach dem ersten Serverstart.",
-        "fr": "Réservé aux administrateurs. Ses réglages apparaissent après le premier démarrage."
+        "it": "Solo per amministratori: a chi non lo è i comandi non rispondono. Le impostazioni qui sotto compaiono dopo il primo avvio del server e riguardano quante munizioni dà ogni comparsa.",
+        "en": "Admins only: to anyone else the commands do not answer. The settings below appear after the first server start and control how much ammo each spawn gives.",
+        "de": "Nur für Admins: allen anderen antworten die Befehle nicht. Die Einstellungen unten erscheinen nach dem ersten Serverstart und regeln, wie viel Munition jede Erzeugung mitgibt.",
+        "fr": "Réservé aux administrateurs : aux autres, les commandes ne répondent pas. Les réglages ci-dessous apparaissent après le premier démarrage et fixent les munitions données à chaque apparition."
       },
+      "Usage": [
+        {
+          "Cmd": "!sw_menu",
+          "Alt": [
+            "!spawn_menu",
+            "!ws_topmenu"
+          ],
+          "What": {
+            "it": "Apre il menu da cui si sceglie cosa far comparire. È il modo comodo: gli altri comandi servono quando sai già cosa vuoi.",
+            "en": "Opens the menu you pick from. This is the comfortable way: the other commands are for when you already know what you want.",
+            "de": "Öffnet das Menü, aus dem du auswählst. Das ist der bequeme Weg: die anderen Befehle sind für den Fall, dass du schon weißt, was du willst.",
+            "fr": "Ouvre le menu où l'on choisit quoi faire apparaître. C'est la voie confortable : les autres commandes servent quand tu sais déjà ce que tu veux."
+          }
+        },
+        {
+          "Cmd": "!spawnweapon",
+          "Alt": [
+            "!sw"
+          ],
+          "What": {
+            "it": "Fa comparire un'arma dove stai guardando. Vuole il nome dell'arma e, se serve, la quantità.",
+            "en": "Spawns a weapon where you are looking. Takes the weapon name and, if you want, how many.",
+            "de": "Erzeugt eine Waffe dort, wohin du schaust. Erwartet den Waffennamen und, wenn gewünscht, die Anzahl.",
+            "fr": "Fait apparaître une arme là où tu regardes. Demande le nom de l'arme et, au besoin, la quantité."
+          }
+        },
+        {
+          "Cmd": "!giveweapon",
+          "Alt": [
+            "!gw",
+            "!gw_menu"
+          ],
+          "What": {
+            "it": "Consegna un'arma direttamente a un giocatore, invece di lasciarla per terra.",
+            "en": "Hands a weapon straight to a player instead of leaving it on the ground.",
+            "de": "Gibt eine Waffe direkt an einen Spieler, statt sie auf den Boden zu legen.",
+            "fr": "Remet une arme directement à un joueur, au lieu de la laisser au sol."
+          }
+        },
+        {
+          "Cmd": "!zspawn",
+          "Alt": [],
+          "What": {
+            "it": "Fa comparire un infetto speciale dove stai guardando.",
+            "en": "Spawns a special infected where you are looking.",
+            "de": "Erzeugt einen Spezialinfizierten dort, wohin du schaust.",
+            "fr": "Fait apparaître un infecté spécial là où tu regardes."
+          }
+        },
+        {
+          "Cmd": "!spawnmachinegun",
+          "Alt": [
+            "!smg",
+            "!smg_menu"
+          ],
+          "What": {
+            "it": "Piazza una mitragliatrice fissa nel punto in cui stai guardando.",
+            "en": "Places a mounted machine gun where you are looking.",
+            "de": "Stellt ein montiertes Maschinengewehr dorthin, wohin du schaust.",
+            "fr": "Installe une mitrailleuse fixe là où tu regardes."
+          }
+        },
+        {
+          "Cmd": "!removemachinegun",
+          "Alt": [
+            "!rmg"
+          ],
+          "What": {
+            "it": "Toglie la mitragliatrice fissa che hai davanti.",
+            "en": "Removes the mounted machine gun in front of you.",
+            "de": "Entfernt das montierte Maschinengewehr vor dir.",
+            "fr": "Retire la mitrailleuse fixe devant toi."
+          }
+        }
+      ],
       "Author": "Zuko & McFlurry",
       "Page": "https://forums.alliedmods.net/showthread.php?p=993960",
       "Kind": "sourcemod",

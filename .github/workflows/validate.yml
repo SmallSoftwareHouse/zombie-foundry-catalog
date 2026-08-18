@@ -60,6 +60,41 @@ jobs:
                   if not isinstance(desc, dict) or not desc.get("en"):
                       problems.append(f"{where}: Desc must be an object with at least \"en\"")
 
+                  # Usage e' la legenda dei comandi mostrata nel riquadro del
+                  # tool. Non e' obbligatoria — un plugin governato solo da
+                  # cvar non ha comandi da elencare — ma se c'e' deve reggere:
+                  # una voce scritta male non da' errore da nessuna parte, da'
+                  # una legenda vuota o una riga senza spiegazione, che e'
+                  # esattamente il tipo di guasto silenzioso per cui questo
+                  # controllo esiste.
+                  usage = e.get("Usage")
+                  if usage is not None:
+                      if not isinstance(usage, list):
+                          problems.append(f"{where}: Usage must be an array")
+                      else:
+                          cmds = set()
+                          for k, u in enumerate(usage):
+                              uw = f"{where}.Usage[{k}]"
+                              if not isinstance(u, dict):
+                                  problems.append(f"{uw}: must be an object")
+                                  continue
+                              cmd = u.get("Cmd")
+                              if not cmd or not isinstance(cmd, str):
+                                  problems.append(f"{uw}: missing Cmd")
+                              elif cmd in cmds:
+                                  problems.append(f"{uw}: duplicate Cmd {cmd!r}")
+                              else:
+                                  cmds.add(cmd)
+                              what = u.get("What")
+                              if not isinstance(what, dict) or not what.get("en"):
+                                  problems.append(f"{uw}: What must be an object with at least \"en\"")
+                              alt = u.get("Alt")
+                              if alt is not None and (
+                                  not isinstance(alt, list)
+                                  or not all(isinstance(a, str) and a for a in alt)
+                              ):
+                                  problems.append(f"{uw}: Alt must be an array of non-empty strings")
+
                   steps = e.get("Steps")
                   if not isinstance(steps, list) or not steps:
                       problems.append(f"{where}: Steps must be a non-empty array")
