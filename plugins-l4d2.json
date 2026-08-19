@@ -195,6 +195,144 @@
           "Comment": "Il plugin chiama LoadTranslations(\"weaponspawner.phrases\") ma il file non è allegato al post: esiste solo in inglese, fermo al 2010. Questo lo abbiamo scritto noi in 4 lingue con le stesse chiavi."
         }
       ]
+    },
+    {
+      "Id": "spawnprops",
+      "Name": "Objects Spawner",
+      "Desc": {
+        "it": "Menu per piazzare oggetti e ostacoli sulla mappa e salvarli",
+        "en": "Menu to place objects and obstacles on the map and save them",
+        "de": "Menü zum Platzieren von Objekten und Hindernissen auf der Karte",
+        "fr": "Menu pour placer objets et obstacles sur la carte et les sauvegarder"
+      },
+      "Long": {
+        "it": "Dà agli amministratori un menu in gioco per piazzare oggetti, ostacoli, casse e barriere nel punto in cui stanno guardando, scegliendo se debbano cadere, restare fermi o lasciar passare. Serve a modificare una mappa senza toccarne i file: chiudere una scorciatoia, aprire un riparo, costruire un percorso.",
+        "en": "Gives admins an in-game menu to place objects, obstacles, crates and barriers wherever they are looking, choosing whether each one falls, stays put or lets players through. It is a way to change a map without touching its files: close a shortcut, open a shelter, build a route.",
+        "de": "Gibt Admins ein Menü im Spiel, um Objekte, Hindernisse, Kisten und Barrieren dort zu platzieren, wohin sie schauen — wahlweise fallend, feststehend oder durchlässig. So lässt sich eine Karte ändern, ohne ihre Dateien anzufassen: eine Abkürzung schließen, einen Unterschlupf öffnen, einen Weg bauen.",
+        "fr": "Donne aux administrateurs un menu en jeu pour placer objets, obstacles, caisses et barrières là où ils regardent, en choisissant si chacun tombe, reste fixe ou laisse passer. C'est une façon de modifier une carte sans toucher à ses fichiers : fermer un raccourci, ouvrir un abri, construire un passage."
+      },
+      "Hint": {
+        "it": "Solo per amministratori: in gioco si apre con !admin, voce \"Spawn Objects\". Installa anche Left4DHooks e Stripper:Source, di cui ha bisogno per funzionare: senza Stripper il plugin non parte proprio. Gli oggetti piazzati si salvano in modo permanente e restano anche dopo un riavvio.",
+        "en": "Admins only: in game it opens with !admin, entry \"Spawn Objects\". It also installs Left4DHooks and Stripper:Source, which it needs to work: without Stripper the plugin does not start at all. Objects you place can be saved permanently and survive a restart.",
+        "de": "Nur für Admins: im Spiel über !admin, Eintrag \"Spawn Objects\". Es installiert auch Left4DHooks und Stripper:Source, die es zum Laufen braucht: ohne Stripper startet das Plugin gar nicht. Platzierte Objekte lassen sich dauerhaft speichern und überstehen einen Neustart.",
+        "fr": "Réservé aux administrateurs : en jeu il s'ouvre avec !admin, entrée \"Spawn Objects\". Il installe aussi Left4DHooks et Stripper:Source, dont il a besoin pour fonctionner : sans Stripper le plugin ne démarre pas du tout. Les objets placés peuvent être enregistrés définitivement et survivent à un redémarrage."
+      },
+      "Usage": [
+        {
+          "Cmd": "!admin",
+          "Alt": [],
+          "What": {
+            "it": "Apre il menu amministratore: la voce \"Spawn Objects\" è il punto d'ingresso per tutto, dal piazzare al salvare. È il modo previsto dall'autore; i comandi qui sotto sono scorciatoie.",
+            "en": "Opens the admin menu: the \"Spawn Objects\" entry is the way in to everything, from placing to saving. It is the way the author intended; the commands below are shortcuts.",
+            "de": "Öffnet das Admin-Menü: der Eintrag \"Spawn Objects\" ist der Zugang zu allem, vom Platzieren bis zum Speichern. So hat es der Autor vorgesehen; die Befehle unten sind Abkürzungen.",
+            "fr": "Ouvre le menu administrateur : l'entrée \"Spawn Objects\" est la porte d'entrée pour tout, du placement à la sauvegarde. C'est la voie prévue par l'auteur ; les commandes ci-dessous sont des raccourcis."
+          }
+        },
+        {
+          "Cmd": "!spsavestripper",
+          "Alt": [],
+          "What": {
+            "it": "Salva in modo permanente quello che hai piazzato, in addons/stripper/maps/<mappa>.cfg. Da lì gli oggetti ricompaiono a ogni partita su quella mappa.",
+            "en": "Saves what you placed permanently, into addons/stripper/maps/<map>.cfg. From there the objects come back on every game on that map.",
+            "de": "Speichert das Platzierte dauerhaft in addons/stripper/maps/<map>.cfg. Von dort erscheinen die Objekte in jedem Spiel auf dieser Karte wieder.",
+            "fr": "Enregistre définitivement ce que tu as placé, dans addons/stripper/maps/<carte>.cfg. De là, les objets reviennent à chaque partie sur cette carte."
+          }
+        },
+        {
+          "Cmd": "!spdeletelook",
+          "Alt": [],
+          "What": {
+            "it": "Cancella l'oggetto che hai davanti, quello puntato dal mirino.",
+            "en": "Deletes the object in front of you, the one under your crosshair.",
+            "de": "Löscht das Objekt vor dir, das unter dem Fadenkreuz.",
+            "fr": "Supprime l'objet devant toi, celui visé par le réticule."
+          }
+        },
+        {
+          "Cmd": "!spdeletelast",
+          "Alt": [],
+          "What": {
+            "it": "Cancella l'ultimo oggetto piazzato. Comodo per annullare una prova andata male.",
+            "en": "Deletes the last object placed. Handy for undoing an attempt that went wrong.",
+            "de": "Löscht das zuletzt platzierte Objekt. Praktisch, um einen misslungenen Versuch rückgängig zu machen.",
+            "fr": "Supprime le dernier objet placé. Pratique pour annuler un essai raté."
+          }
+        },
+        {
+          "Cmd": "!spdeleteall",
+          "Alt": [],
+          "What": {
+            "it": "Cancella tutti gli oggetti piazzati in questa sessione.",
+            "en": "Deletes every object placed in this session.",
+            "de": "Löscht alle in dieser Sitzung platzierten Objekte.",
+            "fr": "Supprime tous les objets placés durant cette session."
+          }
+        }
+      ],
+      "Version": "4.4",
+      "Author": "honorcode23, $atanic $pirit & HarryPotter",
+      "Page": "https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d2_spawn_props",
+      "Kind": "sourcemod",
+      "NeedsConfig": false,
+      "Steps": [
+        {
+          "Type": "zip",
+          "URL": "https://www.bailopan.net/stripper/snapshots/1.2/stripper-1.2.2-git141-windows.zip",
+          "Extract": "game",
+          "Comment": "Stripper:Source, estensione MetaMod. NON e' facoltativa: nel sorgente del plugin OnAllPluginsLoaded() chiama SetFailState due volte, se manca stripper_version e se manca stripper_cfg_path, e il secondo messaggio nomina proprio 'stripper-1.2.2-git141-xxxxx.zip'. Il readme che la presenta come 'serve per salvare in modo permanente' e' fuorviante: senza, il plugin non parte. Si estrae tutto: le DLL degli altri sedici giochi non danno fastidio, e l'estrazione crea addons/stripper/maps/ e dumps/, cartelle VUOTE che nessun passo di copia potrebbe creare. Le build 1.2.2 senza suffisso git non funzionano (due utenti bloccati cosi' nel thread)."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d2_spawn_props/plugins/l4d2_spawn_props.smx",
+          "Dest": "addons/sourcemod/plugins/l4d2_spawn_props.smx",
+          "Comment": "Seguito mantenuto dell'originale di honorcode23 (thread 127418, autore bandito, fermo al 2010). L'originale non è installabile da un programma: il suo elenco modelli sta dietro Cloudflare (attachment.php, 403) e le istruzioni chiedono di creare a mano tre cartelle vuote. Questo invece porta ogni file su GitHub. Repo GPL-3.0: scarichiamo dalla fonte, non ridistribuiamo."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d2_spawn_props/translations/l4d2_spawn_props.phrases.txt",
+          "Dest": "addons/sourcemod/translations/l4d2_spawn_props.phrases.txt"
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d2_spawn_props/data/l4d2_spawn_props/model_english.cfg",
+          "Dest": "addons/sourcemod/data/l4d2_spawn_props/model_english.cfg",
+          "Comment": "L'elenco dei modelli piazzabili: senza, il menu è vuoto. È il valore predefinito di l4d2_spawn_props_model_file."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d2_spawn_props/data/l4d2_spawn_props/model_chinese.cfg",
+          "Dest": "addons/sourcemod/data/l4d2_spawn_props/model_chinese.cfg",
+          "Comment": "L'altro elenco previsto dall'autore. Lo installiamo anche se il predefinito è quello inglese: l4d2_spawn_props_model_file è una delle impostazioni modificabili, e puntarla su un file assente romperebbe il plugin per colpa nostra."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d2_spawn_props/data/l4d2_spawn_props/random_path.cfg",
+          "Dest": "addons/sourcemod/data/l4d2_spawn_props/random_path.cfg",
+          "Comment": "Percorsi predefiniti, letti solo se si accende l4d2_spawn_props_autoload_random_path."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/plugins/left4dhooks.smx",
+          "Dest": "addons/sourcemod/plugins/left4dhooks.smx",
+          "Comment": "Da qui in giù è Left4DHooks (SilvDev, v1.168, GPL-3.0): non è un plugin che l'utente ha scelto, è la dipendenza senza la quale Objects Spawner non parte. Il repo non pubblica release, i file stanno nell'albero. Finché il catalogo non sa dichiarare le dipendenze, stanno qui dentro; il giorno che lo saprà, questi quattro passi diventano una voce a sé e questa la dichiara. Installarli prima o dopo è indifferente: SourceMod risolve le native al caricamento, non nell'ordine in cui i file sono arrivati."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/gamedata/left4dhooks.l4d2.txt",
+          "Dest": "addons/sourcemod/gamedata/left4dhooks.l4d2.txt",
+          "Comment": "Solo la variante l4d2: i file .l4d1. sono per Left 4 Dead 1. Senza gamedata il plugin carica e poi fallisce in silenzio."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/gamedata/lux_library.txt",
+          "Dest": "addons/sourcemod/gamedata/lux_library.txt"
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/data/left4dhooks.l4d2.cfg",
+          "Dest": "addons/sourcemod/data/left4dhooks.l4d2.cfg"
+        }
+      ]
     }
   ]
 }

@@ -22,7 +22,7 @@ jobs:
           python3 - <<'PY'
           import glob, json, sys
 
-          KNOWN_STEPS = {"github_release", "url", "asset"}
+          KNOWN_STEPS = {"github_release", "url", "asset", "zip"}
           problems = []
 
           files = sorted(glob.glob("plugins-*.json"))
