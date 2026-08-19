@@ -2,45 +2,6 @@
   "_comment": "Catalogo dei plugin installabili — versione VIVA, letta dai tool installati. Modificando questo file si aggiungono plugin o si cambiano le fonti senza pubblicare una nuova versione. Contiene SOLO link: i file si scaricano dalla fonte originale, non li ridistribuiamo. Le descrizioni sono testo per lingua, non chiavi i18n, perché un plugin aggiunto da remoto non avrebbe la sua chiave nei tool già installati.",
   "Plugins": [
     {
-      "Id": "l4dtoolz",
-      "Name": "L4DToolZ",
-      "Desc": {
-        "it": "Decidi tu quanti posti ha il server, fino a 32",
-        "en": "You decide how many slots the server has, up to 32",
-        "de": "Du bestimmst die Platzzahl des Servers, bis zu 32",
-        "fr": "C'est toi qui décides le nombre de places du serveur, jusqu'à 32"
-      },
-      "Long": {
-        "it": "Il gioco fissa i posti e la configurazione non può cambiarli: 4 in campagna, 8 in versus. Questo plugin aggiunge sv_maxplayers, con cui il numero lo scegli tu da 1 a 32, e sv_force_unreserved, che rende il server raggiungibile scrivendo direttamente il suo indirizzo invece che solo passando dalla lobby di Steam. Non ha comandi in gioco: si governa da queste due impostazioni, che il tool scrive in server.cfg per te.",
-        "en": "The game fixes the number of slots and no configuration can change it: 4 in campaign, 8 in versus. This plugin adds sv_maxplayers, which lets you pick the number yourself from 1 to 32, and sv_force_unreserved, which makes the server reachable by typing its address directly instead of only through the Steam lobby. It has no in-game commands: it is driven by those two settings, which the tool writes into server.cfg for you.",
-        "de": "Das Spiel legt die Platzzahl fest, und keine Konfiguration ändert das: 4 in der Kampagne, 8 im Versus. Dieses Plugin fügt sv_maxplayers hinzu, womit du die Zahl selbst von 1 bis 32 wählst, und sv_force_unreserved, das den Server direkt über seine Adresse erreichbar macht statt nur über die Steam-Lobby. Es hat keine Befehle im Spiel: es wird über diese zwei Einstellungen gesteuert, die das Programm für dich in server.cfg schreibt.",
-        "fr": "Le jeu fixe le nombre de places et aucune configuration ne peut le changer : 4 en campagne, 8 en versus. Ce plugin ajoute sv_maxplayers, qui te laisse choisir le nombre toi-même de 1 à 32, et sv_force_unreserved, qui rend le serveur joignable en tapant son adresse directement au lieu de passer seulement par le lobby Steam. Il n'a aucune commande en jeu : il se pilote avec ces deux réglages, que l'outil écrit dans server.cfg pour toi."
-      },
-      "Hint": {
-        "it": "sv_force_unreserved non è neutro: acceso, fa entrare chi scrive l'indirizzo del server, ma toglie il server dal matchmaking. Accendilo se giochi con gente che inviti tu, lascialo spento se aspetti giocatori a caso.",
-        "en": "sv_force_unreserved is not neutral: switched on it lets people in by address, but it takes the server out of matchmaking. Turn it on if you play with people you invite, leave it off if you expect random players.",
-        "de": "sv_force_unreserved ist nicht neutral: eingeschaltet lässt es Leute über die Adresse herein, nimmt den Server aber aus dem Matchmaking. Schalte es ein, wenn du mit eingeladenen Leuten spielst, lass es aus, wenn du zufällige Spieler erwartest.",
-        "fr": "sv_force_unreserved n'est pas neutre : activé, il laisse entrer par l'adresse, mais il retire le serveur du matchmaking. Active-le si tu joues avec des gens que tu invites, laisse-le éteint si tu attends des joueurs au hasard."
-      },
-      "Version": "2.2.0",
-      "Author": "Accelerator74",
-      "Page": "https://github.com/accelerator74/l4dtoolz",
-      "Kind": "metamod",
-      "NeedsConfig": true,
-      "Steps": [
-        {
-          "Type": "github_release",
-          "Repo": "accelerator74/l4dtoolz",
-          "AssetMatch": {
-            "windows": "l4d2-win",
-            "linux": "l4d2-linux"
-          },
-          "Extract": "game",
-          "Comment": "L'archivio contiene già addons/l4dtoolz/ e addons/metamod/: si estrae nella cartella del gioco e ogni file va al suo posto. Fork mantenuto (ultimo aggiornamento 2026-07); l'originale ivailosp è fermo al 2017."
-        }
-      ]
-    },
-    {
       "Id": "afkjointeam",
       "Name": "AFK and Join Team",
       "Desc": {
