@@ -8,19 +8,25 @@
         "it": "Comandi per mettersi in pausa come spettatore e cambiare squadra",
         "en": "Commands to go idle as a spectator and to switch team",
         "de": "Befehle für Zuschauerpause und Teamwechsel",
-        "fr": "Commandes pour se mettre en pause comme spectateur et changer d'équipe"
+        "fr": "Commandes pour se mettre en pause comme spectateur et changer d'équipe",
+        "ru": "Команды, чтобы уйти в наблюдатели и сменить команду",
+        "es": "Comandos para pasar a espectador y cambiar de equipo"
       },
       "Long": {
         "it": "Aggiunge i comandi con cui un giocatore si mette in pausa come spettatore e rientra, o passa fra sopravvissuti e infetti, senza dover uscire dalla partita.",
         "en": "Adds the commands a player uses to step away as a spectator and come back, or to move between survivors and infected, without leaving the game.",
         "de": "Fügt die Befehle hinzu, mit denen ein Spieler als Zuschauer pausiert und zurückkehrt oder zwischen Überlebenden und Infizierten wechselt, ohne das Spiel zu verlassen.",
-        "fr": "Ajoute les commandes permettant à un joueur de se mettre en pause comme spectateur puis de revenir, ou de passer entre survivants et infectés, sans quitter la partie."
+        "fr": "Ajoute les commandes permettant à un joueur de se mettre en pause comme spectateur puis de revenir, ou de passer entre survivants et infectés, sans quitter la partie.",
+        "ru": "Добавляет команды, которыми игрок уходит в наблюдатели и возвращается или переходит между выжившими и заражёнными, не покидая игру.",
+        "es": "Añade los comandos con los que un jugador se aparta como espectador y vuelve, o pasa entre supervivientes e infectados, sin salir de la partida."
       },
       "Hint": {
         "it": "Non ha impostazioni e funziona appena installato. I comandi si scrivono in chat (tasto Y) con il punto esclamativo; in console sono gli stessi con sm_ al posto del punto esclamativo.",
         "en": "No settings, and it works as soon as it is installed. The commands are typed in chat (Y key) with an exclamation mark; in the console they are the same, with sm_ in place of the mark.",
         "de": "Keine Einstellungen, und es funktioniert sofort nach der Installation. Die Befehle tippt man im Chat (Taste Y) mit Ausrufezeichen; in der Konsole heißen sie gleich, nur mit sm_ statt des Zeichens.",
-        "fr": "Aucun réglage, et il fonctionne dès l'installation. Les commandes se tapent dans le chat (touche Y) avec un point d'exclamation ; dans la console ce sont les mêmes, avec sm_ à la place."
+        "fr": "Aucun réglage, et il fonctionne dès l'installation. Les commandes se tapent dans le chat (touche Y) avec un point d'exclamation ; dans la console ce sont les mêmes, avec sm_ à la place.",
+        "ru": "Настроек нет, работает сразу после установки. Команды пишутся в чате (клавиша Y) с восклицательным знаком; в консоли они те же самые, но вместо знака — sm_.",
+        "es": "No tiene ajustes y funciona nada más instalarlo. Los comandos se escriben en el chat (tecla Y) con el signo de exclamación; en la consola son los mismos, con sm_ en lugar del signo."
       },
       "Usage": [
         {
@@ -37,7 +43,9 @@
             "it": "Ti sposta fra gli spettatori senza farti uscire dalla partita. Per rientrare usa uno dei due comandi di squadra qui sotto.",
             "en": "Moves you to the spectators without dropping you out of the game. To come back, use one of the two team commands below.",
             "de": "Setzt dich zu den Zuschauern, ohne dich aus dem Spiel zu werfen. Zum Zurückkommen einen der beiden Team-Befehle unten benutzen.",
-            "fr": "Te place parmi les spectateurs sans te faire quitter la partie. Pour revenir, utilise une des deux commandes d'équipe ci-dessous."
+            "fr": "Te place parmi les spectateurs sans te faire quitter la partie. Pour revenir, utilise une des deux commandes d'équipe ci-dessous.",
+            "ru": "Переводит тебя к наблюдателям, не выкидывая из игры. Чтобы вернуться, используй одну из двух команд ниже.",
+            "es": "Te pasa a los espectadores sin sacarte de la partida. Para volver, usa uno de los dos comandos de equipo de abajo."
           }
         },
         {
@@ -50,7 +58,9 @@
             "it": "Ti fa entrare fra i sopravvissuti, se c'è posto.",
             "en": "Puts you with the survivors, if there is room.",
             "de": "Setzt dich zu den Überlebenden, wenn Platz ist.",
-            "fr": "Te fait rejoindre les survivants, s'il y a de la place."
+            "fr": "Te fait rejoindre les survivants, s'il y a de la place.",
+            "ru": "Ставит тебя к выжившим, если есть место.",
+            "es": "Te pone con los supervivientes, si hay sitio."
           }
         },
         {
@@ -63,7 +73,9 @@
             "it": "Ti fa entrare fra gli infetti, se c'è posto.",
             "en": "Puts you with the infected, if there is room.",
             "de": "Setzt dich zu den Infizierten, wenn Platz ist.",
-            "fr": "Te fait rejoindre les infectés, s'il y a de la place."
+            "fr": "Te fait rejoindre les infectés, s'il y a de la place.",
+            "ru": "Ставит тебя к заражённым, если есть место.",
+            "es": "Te pone con los infectados, si hay sitio."
           }
         }
       ],
@@ -88,19 +100,25 @@
         "it": "Menu per far comparire armi, oggetti e infetti speciali",
         "en": "Menu to spawn weapons, items and special infected",
         "de": "Menü zum Erzeugen von Waffen, Gegenständen und Spezialinfizierten",
-        "fr": "Menu pour faire apparaître armes, objets et infectés spéciaux"
+        "fr": "Menu pour faire apparaître armes, objets et infectés spéciaux",
+        "ru": "Меню для появления оружия, предметов и особых заражённых",
+        "es": "Menú para hacer aparecer armas, objetos e infectados especiales"
       },
       "Long": {
         "it": "Dà agli amministratori un menu in gioco per far comparire armi, munizioni, oggetti e infetti speciali nel punto in cui stanno guardando. Utile per provare una mappa o per partite personalizzate.",
         "en": "Gives admins an in-game menu to spawn weapons, ammo, items and special infected wherever they are looking. Useful for testing a map or for custom matches.",
         "de": "Gibt Admins ein Menü im Spiel, um Waffen, Munition, Gegenstände und Spezialinfizierte dort erscheinen zu lassen, wohin sie schauen. Nützlich zum Testen einer Karte oder für eigene Partien.",
-        "fr": "Donne aux administrateurs un menu en jeu pour faire apparaître armes, munitions, objets et infectés spéciaux là où ils regardent. Utile pour tester une carte ou pour des parties personnalisées."
+        "fr": "Donne aux administrateurs un menu en jeu pour faire apparaître armes, munitions, objets et infectés spéciaux là où ils regardent. Utile pour tester une carte ou pour des parties personnalisées.",
+        "ru": "Даёт администраторам игровое меню, чтобы создавать оружие, патроны, предметы и особых заражённых там, куда они смотрят. Полезно, чтобы проверить карту или для своих матчей.",
+        "es": "Da a los administradores un menú en el juego para hacer aparecer armas, munición, objetos e infectados especiales allí donde miran. Útil para probar un mapa o para partidas personalizadas."
       },
       "Hint": {
         "it": "Solo per amministratori: a chi non lo è i comandi non rispondono. Le impostazioni qui sotto compaiono dopo il primo avvio del server e riguardano quante munizioni dà ogni comparsa.",
         "en": "Admins only: to anyone else the commands do not answer. The settings below appear after the first server start and control how much ammo each spawn gives.",
         "de": "Nur für Admins: allen anderen antworten die Befehle nicht. Die Einstellungen unten erscheinen nach dem ersten Serverstart und regeln, wie viel Munition jede Erzeugung mitgibt.",
-        "fr": "Réservé aux administrateurs : aux autres, les commandes ne répondent pas. Les réglages ci-dessous apparaissent après le premier démarrage et fixent les munitions données à chaque apparition."
+        "fr": "Réservé aux administrateurs : aux autres, les commandes ne répondent pas. Les réglages ci-dessous apparaissent après le premier démarrage et fixent les munitions données à chaque apparition.",
+        "ru": "Только для администраторов: остальным команды не отвечают. Настройки ниже появляются после первого запуска сервера и задают, сколько патронов даёт каждое появление.",
+        "es": "Solo para administradores: a los demás los comandos no responden. Los ajustes de abajo aparecen tras el primer arranque del servidor y fijan cuánta munición da cada aparición."
       },
       "Usage": [
         {
@@ -113,7 +131,9 @@
             "it": "Apre il menu da cui si sceglie cosa far comparire. È il modo comodo: gli altri comandi servono quando sai già cosa vuoi.",
             "en": "Opens the menu you pick from. This is the comfortable way: the other commands are for when you already know what you want.",
             "de": "Öffnet das Menü, aus dem du auswählst. Das ist der bequeme Weg: die anderen Befehle sind für den Fall, dass du schon weißt, was du willst.",
-            "fr": "Ouvre le menu où l'on choisit quoi faire apparaître. C'est la voie confortable : les autres commandes servent quand tu sais déjà ce que tu veux."
+            "fr": "Ouvre le menu où l'on choisit quoi faire apparaître. C'est la voie confortable : les autres commandes servent quand tu sais déjà ce que tu veux.",
+            "ru": "Открывает меню, из которого выбираешь, что создать. Это удобный способ: остальные команды — на случай, когда уже знаешь, что тебе нужно.",
+            "es": "Abre el menú desde el que eliges qué hacer aparecer. Es la vía cómoda: los demás comandos sirven cuando ya sabes lo que quieres."
           }
         },
         {
@@ -125,7 +145,9 @@
             "it": "Fa comparire un'arma dove stai guardando. Vuole il nome dell'arma e, se serve, la quantità.",
             "en": "Spawns a weapon where you are looking. Takes the weapon name and, if you want, how many.",
             "de": "Erzeugt eine Waffe dort, wohin du schaust. Erwartet den Waffennamen und, wenn gewünscht, die Anzahl.",
-            "fr": "Fait apparaître une arme là où tu regardes. Demande le nom de l'arme et, au besoin, la quantité."
+            "fr": "Fait apparaître une arme là où tu regardes. Demande le nom de l'arme et, au besoin, la quantité.",
+            "ru": "Создаёт оружие там, куда ты смотришь. Нужно название оружия и, если хочешь, количество.",
+            "es": "Hace aparecer un arma donde estás mirando. Pide el nombre del arma y, si quieres, la cantidad."
           }
         },
         {
@@ -138,7 +160,9 @@
             "it": "Consegna un'arma direttamente a un giocatore, invece di lasciarla per terra.",
             "en": "Hands a weapon straight to a player instead of leaving it on the ground.",
             "de": "Gibt eine Waffe direkt an einen Spieler, statt sie auf den Boden zu legen.",
-            "fr": "Remet une arme directement à un joueur, au lieu de la laisser au sol."
+            "fr": "Remet une arme directement à un joueur, au lieu de la laisser au sol.",
+            "ru": "Выдаёт оружие прямо игроку, а не оставляет его на земле.",
+            "es": "Entrega un arma directamente a un jugador, en vez de dejarla en el suelo."
           }
         },
         {
@@ -148,7 +172,9 @@
             "it": "Fa comparire un infetto speciale dove stai guardando.",
             "en": "Spawns a special infected where you are looking.",
             "de": "Erzeugt einen Spezialinfizierten dort, wohin du schaust.",
-            "fr": "Fait apparaître un infecté spécial là où tu regardes."
+            "fr": "Fait apparaître un infecté spécial là où tu regardes.",
+            "ru": "Создаёт особого заражённого там, куда ты смотришь.",
+            "es": "Hace aparecer un infectado especial donde estás mirando."
           }
         },
         {
@@ -161,7 +187,9 @@
             "it": "Piazza una mitragliatrice fissa nel punto in cui stai guardando.",
             "en": "Places a mounted machine gun where you are looking.",
             "de": "Stellt ein montiertes Maschinengewehr dorthin, wohin du schaust.",
-            "fr": "Installe une mitrailleuse fixe là où tu regardes."
+            "fr": "Installe une mitrailleuse fixe là où tu regardes.",
+            "ru": "Ставит стационарный пулемёт там, куда ты смотришь.",
+            "es": "Coloca una ametralladora fija donde estás mirando."
           }
         },
         {
@@ -173,7 +201,9 @@
             "it": "Toglie la mitragliatrice fissa che hai davanti.",
             "en": "Removes the mounted machine gun in front of you.",
             "de": "Entfernt das montierte Maschinengewehr vor dir.",
-            "fr": "Retire la mitrailleuse fixe devant toi."
+            "fr": "Retire la mitrailleuse fixe devant toi.",
+            "ru": "Убирает стационарный пулемёт перед тобой.",
+            "es": "Quita la ametralladora fija que tienes delante."
           }
         }
       ],
@@ -203,19 +233,25 @@
         "it": "Menu per piazzare oggetti e ostacoli sulla mappa e salvarli",
         "en": "Menu to place objects and obstacles on the map and save them",
         "de": "Menü zum Platzieren von Objekten und Hindernissen auf der Karte",
-        "fr": "Menu pour placer objets et obstacles sur la carte et les sauvegarder"
+        "fr": "Menu pour placer objets et obstacles sur la carte et les sauvegarder",
+        "ru": "Меню, чтобы ставить предметы и препятствия на карте и сохранять их",
+        "es": "Menú para colocar objetos y obstáculos en el mapa y guardarlos"
       },
       "Long": {
         "it": "Dà agli amministratori un menu in gioco per piazzare oggetti, ostacoli, casse e barriere nel punto in cui stanno guardando, scegliendo se debbano cadere, restare fermi o lasciar passare. Serve a modificare una mappa senza toccarne i file: chiudere una scorciatoia, aprire un riparo, costruire un percorso.",
         "en": "Gives admins an in-game menu to place objects, obstacles, crates and barriers wherever they are looking, choosing whether each one falls, stays put or lets players through. It is a way to change a map without touching its files: close a shortcut, open a shelter, build a route.",
         "de": "Gibt Admins ein Menü im Spiel, um Objekte, Hindernisse, Kisten und Barrieren dort zu platzieren, wohin sie schauen — wahlweise fallend, feststehend oder durchlässig. So lässt sich eine Karte ändern, ohne ihre Dateien anzufassen: eine Abkürzung schließen, einen Unterschlupf öffnen, einen Weg bauen.",
-        "fr": "Donne aux administrateurs un menu en jeu pour placer objets, obstacles, caisses et barrières là où ils regardent, en choisissant si chacun tombe, reste fixe ou laisse passer. C'est une façon de modifier une carte sans toucher à ses fichiers : fermer un raccourci, ouvrir un abri, construire un passage."
+        "fr": "Donne aux administrateurs un menu en jeu pour placer objets, obstacles, caisses et barrières là où ils regardent, en choisissant si chacun tombe, reste fixe ou laisse passer. C'est une façon de modifier une carte sans toucher à ses fichiers : fermer un raccourci, ouvrir un abri, construire un passage.",
+        "ru": "Даёт администраторам игровое меню, чтобы ставить предметы, препятствия, ящики и барьеры там, куда они смотрят, выбирая, будет ли каждый падать, стоять неподвижно или пропускать игроков. Так можно изменить карту, не трогая её файлы: закрыть короткий путь, открыть укрытие, построить проход.",
+        "es": "Da a los administradores un menú en el juego para colocar objetos, obstáculos, cajas y barreras allí donde miran, eligiendo si cada uno cae, se queda fijo o deja pasar. Es una forma de cambiar un mapa sin tocar sus archivos: cerrar un atajo, abrir un refugio, construir un camino."
       },
       "Hint": {
         "it": "Solo per amministratori: in gioco si apre con !admin, voce \"Spawn Objects\". Installa anche Left4DHooks e Stripper:Source, di cui ha bisogno per funzionare: senza Stripper il plugin non parte proprio. Gli oggetti piazzati si salvano in modo permanente e restano anche dopo un riavvio.",
         "en": "Admins only: in game it opens with !admin, entry \"Spawn Objects\". It also installs Left4DHooks and Stripper:Source, which it needs to work: without Stripper the plugin does not start at all. Objects you place can be saved permanently and survive a restart.",
         "de": "Nur für Admins: im Spiel über !admin, Eintrag \"Spawn Objects\". Es installiert auch Left4DHooks und Stripper:Source, die es zum Laufen braucht: ohne Stripper startet das Plugin gar nicht. Platzierte Objekte lassen sich dauerhaft speichern und überstehen einen Neustart.",
-        "fr": "Réservé aux administrateurs : en jeu il s'ouvre avec !admin, entrée \"Spawn Objects\". Il installe aussi Left4DHooks et Stripper:Source, dont il a besoin pour fonctionner : sans Stripper le plugin ne démarre pas du tout. Les objets placés peuvent être enregistrés définitivement et survivent à un redémarrage."
+        "fr": "Réservé aux administrateurs : en jeu il s'ouvre avec !admin, entrée \"Spawn Objects\". Il installe aussi Left4DHooks et Stripper:Source, dont il a besoin pour fonctionner : sans Stripper le plugin ne démarre pas du tout. Les objets placés peuvent être enregistrés définitivement et survivent à un redémarrage.",
+        "ru": "Только для администраторов: в игре открывается через !admin, пункт \"Spawn Objects\". Вместе с ним ставятся Left4DHooks и Stripper:Source, без которых он не работает: без Stripper плагин вообще не запускается. Расставленные предметы можно сохранить навсегда, и они переживут перезапуск.",
+        "es": "Solo para administradores: en el juego se abre con !admin, entrada \"Spawn Objects\". Instala también Left4DHooks y Stripper:Source, que necesita para funcionar: sin Stripper el plugin no arranca siquiera. Los objetos colocados pueden guardarse de forma permanente y sobreviven a un reinicio."
       },
       "Usage": [
         {
@@ -225,7 +261,9 @@
             "it": "Apre il menu amministratore: la voce \"Spawn Objects\" è il punto d'ingresso per tutto, dal piazzare al salvare. È il modo previsto dall'autore; i comandi qui sotto sono scorciatoie.",
             "en": "Opens the admin menu: the \"Spawn Objects\" entry is the way in to everything, from placing to saving. It is the way the author intended; the commands below are shortcuts.",
             "de": "Öffnet das Admin-Menü: der Eintrag \"Spawn Objects\" ist der Zugang zu allem, vom Platzieren bis zum Speichern. So hat es der Autor vorgesehen; die Befehle unten sind Abkürzungen.",
-            "fr": "Ouvre le menu administrateur : l'entrée \"Spawn Objects\" est la porte d'entrée pour tout, du placement à la sauvegarde. C'est la voie prévue par l'auteur ; les commandes ci-dessous sont des raccourcis."
+            "fr": "Ouvre le menu administrateur : l'entrée \"Spawn Objects\" est la porte d'entrée pour tout, du placement à la sauvegarde. C'est la voie prévue par l'auteur ; les commandes ci-dessous sont des raccourcis.",
+            "ru": "Открывает меню администратора: пункт \"Spawn Objects\" — вход ко всему, от расстановки до сохранения. Так задумал автор; команды ниже — это сокращения.",
+            "es": "Abre el menú de administrador: la entrada \"Spawn Objects\" es la puerta de entrada a todo, desde colocar hasta guardar. Es la vía prevista por el autor; los comandos de abajo son atajos."
           }
         },
         {
@@ -235,7 +273,9 @@
             "it": "Salva in modo permanente quello che hai piazzato, in addons/stripper/maps/<mappa>.cfg. Da lì gli oggetti ricompaiono a ogni partita su quella mappa.",
             "en": "Saves what you placed permanently, into addons/stripper/maps/<map>.cfg. From there the objects come back on every game on that map.",
             "de": "Speichert das Platzierte dauerhaft in addons/stripper/maps/<map>.cfg. Von dort erscheinen die Objekte in jedem Spiel auf dieser Karte wieder.",
-            "fr": "Enregistre définitivement ce que tu as placé, dans addons/stripper/maps/<carte>.cfg. De là, les objets reviennent à chaque partie sur cette carte."
+            "fr": "Enregistre définitivement ce que tu as placé, dans addons/stripper/maps/<carte>.cfg. De là, les objets reviennent à chaque partie sur cette carte.",
+            "ru": "Навсегда сохраняет расставленное в addons/stripper/maps/<карта>.cfg. Оттуда предметы возвращаются в каждой игре на этой карте.",
+            "es": "Guarda de forma permanente lo que has colocado, en addons/stripper/maps/<mapa>.cfg. Desde ahí los objetos vuelven en cada partida en ese mapa."
           }
         },
         {
@@ -245,7 +285,9 @@
             "it": "Cancella l'oggetto che hai davanti, quello puntato dal mirino.",
             "en": "Deletes the object in front of you, the one under your crosshair.",
             "de": "Löscht das Objekt vor dir, das unter dem Fadenkreuz.",
-            "fr": "Supprime l'objet devant toi, celui visé par le réticule."
+            "fr": "Supprime l'objet devant toi, celui visé par le réticule.",
+            "ru": "Удаляет предмет перед тобой, тот, что под прицелом.",
+            "es": "Borra el objeto que tienes delante, el apuntado por la mira."
           }
         },
         {
@@ -255,7 +297,9 @@
             "it": "Cancella l'ultimo oggetto piazzato. Comodo per annullare una prova andata male.",
             "en": "Deletes the last object placed. Handy for undoing an attempt that went wrong.",
             "de": "Löscht das zuletzt platzierte Objekt. Praktisch, um einen misslungenen Versuch rückgängig zu machen.",
-            "fr": "Supprime le dernier objet placé. Pratique pour annuler un essai raté."
+            "fr": "Supprime le dernier objet placé. Pratique pour annuler un essai raté.",
+            "ru": "Удаляет последний поставленный предмет. Удобно, чтобы отменить неудачную попытку.",
+            "es": "Borra el último objeto colocado. Práctico para deshacer un intento fallido."
           }
         },
         {
@@ -265,7 +309,9 @@
             "it": "Cancella tutti gli oggetti piazzati in questa sessione.",
             "en": "Deletes every object placed in this session.",
             "de": "Löscht alle in dieser Sitzung platzierten Objekte.",
-            "fr": "Supprime tous les objets placés durant cette session."
+            "fr": "Supprime tous les objets placés durant cette session.",
+            "ru": "Удаляет все предметы, поставленные за эту сессию.",
+            "es": "Borra todos los objetos colocados en esta sesión."
           }
         }
       ],
