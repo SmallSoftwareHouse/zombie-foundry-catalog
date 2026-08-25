@@ -1,5 +1,5 @@
 {
-  "_comment": "Catalogo dei plugin installabili — versione VIVA, letta dai tool installati. Modificando questo file si aggiungono plugin o si cambiano le fonti senza pubblicare una nuova versione. Contiene SOLO link: i file si scaricano dalla fonte originale, non li ridistribuiamo. Le descrizioni sono testo per lingua, non chiavi i18n, perché un plugin aggiunto da remoto non avrebbe la sua chiave nei tool già installati.",
+  "_comment": "Catalogo dei plugin installabili — copia di riserva incorporata nel tool. La versione viva sta nel repo zombie-foundry-catalog (vedi CatalogURL), non in un gist: un catalogo rotto fallisce in silenzio, e il repo ha una validazione automatica che lo rifiuta prima che parta: modificando quella si aggiungono plugin o si cambiano le fonti senza pubblicare una nuova versione. Contiene SOLO link: i file si scaricano dalla fonte originale, non li ridistribuiamo. Le descrizioni sono testo per lingua, non chiavi i18n, perché un plugin aggiunto da remoto non avrebbe la sua chiave nei tool già installati. I comandi in Usage sono ricavati dagli .smx installati, non dai post del forum: i nomi sono quelli che il plugin registra davvero.",
   "Plugins": [
     {
       "Id": "afkjointeam",
@@ -319,6 +319,7 @@
       "Author": "honorcode23, $atanic $pirit & HarryPotter",
       "Page": "https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d2_spawn_props",
       "Kind": "sourcemod",
+      "License": "GPL-3.0",
       "NeedsConfig": false,
       "Steps": [
         {
@@ -367,6 +368,130 @@
           "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/gamedata/left4dhooks.l4d2.txt",
           "Dest": "addons/sourcemod/gamedata/left4dhooks.l4d2.txt",
           "Comment": "Solo la variante l4d2: i file .l4d1. sono per Left 4 Dead 1. Senza gamedata il plugin carica e poi fallisce in silenzio."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/gamedata/lux_library.txt",
+          "Dest": "addons/sourcemod/gamedata/lux_library.txt"
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/data/left4dhooks.l4d2.cfg",
+          "Dest": "addons/sourcemod/data/left4dhooks.l4d2.cfg"
+        }
+      ]
+    },
+    {
+      "Id": "l4dtoolz",
+      "Name": "L4DToolZ",
+      "Desc": {
+        "it": "Alza il numero di posti del server oltre il limite del gioco, fino a 32",
+        "en": "Raises the server's slot count past the game's limit, up to 32",
+        "de": "Erhöht die Platzzahl des Servers über das Spiellimit hinaus, bis zu 32",
+        "fr": "Augmente le nombre de places du serveur au-delà de la limite du jeu, jusqu'à 32",
+        "ru": "Поднимает число мест на сервере сверх лимита игры, до 32",
+        "es": "Sube el número de plazas del servidor por encima del límite del juego, hasta 32"
+      },
+      "Long": {
+        "it": "Il gioco fissa i posti e nessuna configurazione può cambiarli: 4 in campagna, 8 in versus. Questo plugin aggiunge sv_maxplayers, con cui scegli tu il numero da 1 a 32. Da solo alza il tetto ma non basta a riempirlo: la partita avviata dalla lobby di Steam resta prenotata alla dimensione della modalità finché non si abbina il plugin l4d_unreservelobby, che toglie la prenotazione quando il server si riempie e apre i posti extra a chi si connette direttamente. È un'estensione MetaMod nativa, non SourceMod: aggancia punti precisi nel binario del server, e una patch di Valve può romperli — il sintomo è che le sue cvar 'non esistono' più, e il server può non partire finché il fork non viene aggiornato.",
+        "en": "The game fixes the slot count and no configuration can change it: 4 in campaign, 8 in versus. This plugin adds sv_maxplayers, letting you pick the number yourself from 1 to 32. On its own it raises the ceiling but does not fill it: a match started from the Steam lobby stays reserved at the mode's size until it is paired with the l4d_unreservelobby plugin, which drops the reservation once the server fills up and opens the extra slots to direct connections. It is a native MetaMod extension, not SourceMod: it hooks specific points in the server binary, and a Valve patch can break them — the symptom is its cvars 'no longer existing', and the server may fail to start until the fork is updated.",
+        "de": "Das Spiel legt die Platzzahl fest, und keine Konfiguration ändert das: 4 in der Kampagne, 8 im Versus. Dieses Plugin fügt sv_maxplayers hinzu, womit du die Zahl selbst von 1 bis 32 wählst. Allein hebt es nur die Obergrenze an, füllt sie aber nicht: Eine über die Steam-Lobby gestartete Partie bleibt auf die Modusgröße reserviert, bis das Plugin l4d_unreservelobby dazukommt, das die Reservierung aufhebt, sobald der Server voll ist, und die zusätzlichen Plätze für Direktverbindungen öffnet. Es ist eine native MetaMod-Erweiterung, kein SourceMod: Es hängt sich an bestimmte Stellen im Server-Binary, und ein Valve-Patch kann sie brechen — das Symptom ist, dass seine cvars 'nicht mehr existieren', und der Server startet unter Umständen nicht mehr, bis der Fork aktualisiert wird.",
+        "fr": "Le jeu fixe le nombre de places et aucune configuration ne peut le changer : 4 en campagne, 8 en versus. Ce plugin ajoute sv_maxplayers, qui te laisse choisir le nombre toi-même de 1 à 32. Seul, il relève le plafond mais ne le remplit pas : une partie lancée depuis le lobby Steam reste réservée à la taille du mode tant qu'il n'est pas associé au plugin l4d_unreservelobby, qui retire la réservation une fois le serveur plein et ouvre les places supplémentaires aux connexions directes. C'est une extension MetaMod native, pas SourceMod : elle s'accroche à des points précis du binaire du serveur, et un patch Valve peut les casser — le symptôme est que ses cvars « n'existent plus », et le serveur peut ne pas démarrer tant que le fork n'est pas mis à jour.",
+        "ru": "Игра сама задаёт число мест, и никакая настройка это не изменит: 4 в кампании, 8 в versus. Этот плагин добавляет sv_maxplayers, которым ты сам выбираешь число от 1 до 32. Сам по себе он поднимает потолок, но не заполняет его: матч, запущенный из лобби Steam, остаётся зарезервированным под размер режима, пока не добавлен плагин l4d_unreservelobby, который снимает резервирование, когда сервер заполняется, и открывает лишние места для прямых подключений. Это нативное расширение MetaMod, а не SourceMod: оно цепляется за конкретные места в бинарнике сервера, и патч Valve может их сломать — симптом в том, что его cvar «перестают существовать», и сервер может не запуститься, пока форк не обновят.",
+        "es": "El juego fija el número de plazas y ninguna configuración lo cambia: 4 en campaña, 8 en versus. Este plugin añade sv_maxplayers, con el que eliges tú el número de 1 a 32. Por sí solo sube el tope pero no lo llena: una partida iniciada desde el lobby de Steam sigue reservada al tamaño del modo hasta que se combina con el plugin l4d_unreservelobby, que quita la reserva cuando el servidor se llena y abre las plazas extra a las conexiones directas. Es una extensión nativa de MetaMod, no de SourceMod: se engancha a puntos concretos del binario del servidor, y un parche de Valve puede romperlos — el síntoma es que sus cvars 'dejan de existir', y el servidor puede no arrancar hasta que se actualice el fork."
+      },
+      "Hint": {
+        "it": "Da solo non basta: abbinalo a l4d_unreservelobby per tenere sia i posti extra sia l'avvio normale da lobby Steam. Se il server smette di partire dopo un aggiornamento di Windows/Steam, controlla prima questo plugin: è la causa più probabile.",
+        "en": "On its own it is not enough: pair it with l4d_unreservelobby to keep both the extra slots and the normal Steam lobby start. If the server stops starting after a Windows/Steam update, check this plugin first: it is the likeliest cause.",
+        "de": "Allein reicht es nicht: kombiniere es mit l4d_unreservelobby, um sowohl die zusätzlichen Plätze als auch den normalen Start über die Steam-Lobby zu behalten. Startet der Server nach einem Windows/Steam-Update nicht mehr, prüfe zuerst dieses Plugin: es ist die wahrscheinlichste Ursache.",
+        "fr": "Seul, il ne suffit pas : associe-le à l4d_unreservelobby pour garder à la fois les places supplémentaires et le démarrage normal depuis le lobby Steam. Si le serveur ne démarre plus après une mise à jour Windows/Steam, vérifie d'abord ce plugin : c'est la cause la plus probable.",
+        "ru": "Сам по себе он не решает всё: объедини его с l4d_unreservelobby, чтобы сохранить и лишние места, и обычный запуск из лобби Steam. Если сервер перестал запускаться после обновления Windows/Steam, проверь сначала этот плагин: это самая вероятная причина.",
+        "es": "Por sí solo no basta: combínalo con l4d_unreservelobby para conservar tanto las plazas extra como el inicio normal desde el lobby de Steam. Si el servidor deja de arrancar tras una actualización de Windows/Steam, revisa primero este plugin: es la causa más probable."
+      },
+      "Usage": [],
+      "Version": "2.2.0",
+      "Author": "Accelerator74",
+      "Page": "https://github.com/accelerator74/l4dtoolz",
+      "Kind": "metamod",
+      "NeedsConfig": true,
+      "Steps": [
+        {
+          "Type": "github_release",
+          "Repo": "accelerator74/l4dtoolz",
+          "AssetMatch": {
+            "windows": "l4d2-win",
+            "linux": "l4d2-linux"
+          },
+          "Extract": "game",
+          "Comment": "L'archivio contiene già addons/l4dtoolz/ e addons/metamod/: si estrae nella cartella del gioco e ogni file va al suo posto. Fork mantenuto (ultimo aggiornamento 2026-07); l'originale ivailosp è fermo al 2017."
+        }
+      ]
+    },
+    {
+      "Id": "l4d_unreservelobby",
+      "Name": "Remove Lobby Reservation",
+      "Desc": {
+        "it": "Toglie la prenotazione della lobby quando il server si riempie, aprendo i posti extra",
+        "en": "Drops the lobby reservation once the server fills up, opening the extra slots",
+        "de": "Hebt die Lobby-Reservierung auf, sobald der Server voll ist, und öffnet die zusätzlichen Plätze",
+        "fr": "Retire la réservation du lobby une fois le serveur plein, ouvrant les places supplémentaires",
+        "ru": "Снимает резервирование лобби, когда сервер заполняется, открывая лишние места",
+        "es": "Quita la reserva del lobby cuando el servidor se llena, abriendo las plazas extra"
+      },
+      "Long": {
+        "it": "Una partita avviata dalla lobby di Steam prenota il server, che resta chiuso a chiunque non arrivi da quella lobby e resta dimensionato sulla modalità anche se un plugin come L4DToolZ ha alzato il tetto dei posti. Questo plugin toglie la prenotazione da solo, dopo che la lobby ha già fatto partire la partita e il server si è riempito fino al limite della modalità: da quel momento i posti extra si aprono e ci si entra in connessione diretta, senza aver mai dovuto rinunciare all'avvio normale da lobby.",
+        "en": "A match started from the Steam lobby reserves the server, which stays closed to anyone not arriving from that lobby and stays sized to the mode even if a plugin like L4DToolZ has raised the slot ceiling. This plugin removes the reservation on its own, once the lobby has already started the match and the server has filled up to the mode's limit: from that point the extra slots open up and are reachable by direct connection, without ever having to give up the normal lobby start.",
+        "de": "Eine über die Steam-Lobby gestartete Partie reserviert den Server, der für alle geschlossen bleibt, die nicht aus dieser Lobby kommen, und auf die Modusgröße begrenzt bleibt, selbst wenn ein Plugin wie L4DToolZ die Platzobergrenze angehoben hat. Dieses Plugin hebt die Reservierung von selbst auf, sobald die Lobby die Partie bereits gestartet hat und der Server bis zum Limit des Modus voll ist: ab dann öffnen sich die zusätzlichen Plätze und sind über eine Direktverbindung erreichbar, ohne dass je auf den normalen Lobby-Start verzichtet werden musste.",
+        "fr": "Une partie lancée depuis le lobby Steam réserve le serveur, qui reste fermé à quiconque n'arrive pas de ce lobby et reste dimensionné sur le mode même si un plugin comme L4DToolZ a relevé le plafond de places. Ce plugin retire la réservation de lui-même, une fois que le lobby a déjà lancé la partie et que le serveur s'est rempli jusqu'à la limite du mode : à partir de là, les places supplémentaires s'ouvrent et sont accessibles en connexion directe, sans jamais avoir dû renoncer au démarrage normal depuis le lobby.",
+        "ru": "Матч, запущенный из лобби Steam, резервирует сервер, который остаётся закрытым для всех, кто пришёл не из этого лобби, и остаётся ограниченным размером режима, даже если плагин вроде L4DToolZ поднял потолок мест. Этот плагин сам снимает резервирование, после того как лобби уже запустило матч и сервер заполнился до предела режима: с этого момента лишние места открываются и становятся доступны через прямое подключение, и при этом никогда не приходилось отказываться от обычного запуска из лобби.",
+        "es": "Una partida iniciada desde el lobby de Steam reserva el servidor, que queda cerrado a quien no llegue de ese lobby y sigue dimensionado al modo aunque un plugin como L4DToolZ haya subido el tope de plazas. Este plugin quita la reserva por sí solo, una vez que el lobby ya ha iniciado la partida y el servidor se ha llenado hasta el límite del modo: desde ese momento las plazas extra se abren y se puede entrar por conexión directa, sin haber tenido que renunciar nunca al inicio normal desde el lobby."
+      },
+      "Hint": {
+        "it": "Serve insieme a L4DToolZ: da solo non alza nessun limite. La soglia (l4d_unreservelobby_trigger) va nel suo file cfg/sourcemod/l4d_unreservelobby.cfg, non in server.cfg — SourceMod lo riscrive a ogni cambio mappa e cancellerebbe una modifica messa altrove. Solo server dedicati, non funziona su listen server.",
+        "en": "It only matters together with L4DToolZ: on its own it raises no limit. The threshold (l4d_unreservelobby_trigger) belongs in its own cfg/sourcemod/l4d_unreservelobby.cfg file, not in server.cfg — SourceMod rewrites it on every map change and would erase a change made elsewhere. Dedicated servers only, does not work on a listen server.",
+        "de": "Sinnvoll nur zusammen mit L4DToolZ: allein hebt es kein Limit an. Der Schwellenwert (l4d_unreservelobby_trigger) gehört in seine eigene Datei cfg/sourcemod/l4d_unreservelobby.cfg, nicht in server.cfg — SourceMod schreibt sie bei jedem Kartenwechsel neu und würde eine anderswo gesetzte Änderung löschen. Nur dedizierte Server, funktioniert nicht auf einem Listen-Server.",
+        "fr": "Utile seulement avec L4DToolZ : seul, il ne relève aucune limite. Le seuil (l4d_unreservelobby_trigger) va dans son propre fichier cfg/sourcemod/l4d_unreservelobby.cfg, pas dans server.cfg — SourceMod le réécrit à chaque changement de carte et effacerait une modification faite ailleurs. Serveurs dédiés uniquement, ne fonctionne pas sur un listen server.",
+        "ru": "Имеет смысл только вместе с L4DToolZ: сам по себе он не поднимает лимит. Порог (l4d_unreservelobby_trigger) задаётся в его собственном файле cfg/sourcemod/l4d_unreservelobby.cfg, а не в server.cfg — SourceMod переписывает его при каждой смене карты и сотрёт изменение, сделанное в другом месте. Только выделенные серверы, на listen-сервере не работает.",
+        "es": "Solo tiene sentido junto con L4DToolZ: por sí solo no sube ningún límite. El umbral (l4d_unreservelobby_trigger) va en su propio archivo cfg/sourcemod/l4d_unreservelobby.cfg, no en server.cfg — SourceMod lo reescribe en cada cambio de mapa y borraría un cambio hecho en otro sitio. Solo servidores dedicados, no funciona en un listen server."
+      },
+      "Usage": [
+        {
+          "Cmd": "sm_unreserve",
+          "Alt": [],
+          "What": {
+            "it": "Toglie la prenotazione a mano, se l'automatismo non è scattato. Richiede i permessi di amministratore root.",
+            "en": "Removes the reservation by hand, if the automatic trigger did not fire. Requires root admin permissions.",
+            "de": "Hebt die Reservierung von Hand auf, falls der Automatismus nicht ausgelöst hat. Erfordert Root-Admin-Rechte.",
+            "fr": "Retire la réservation à la main, si le déclenchement automatique n'a pas eu lieu. Nécessite les droits d'administrateur root.",
+            "ru": "Снимает резервирование вручную, если автоматика не сработала. Требует прав root-администратора.",
+            "es": "Quita la reserva a mano, si el disparador automático no saltó. Requiere permisos de administrador root."
+          }
+        }
+      ],
+      "Version": "1.7h",
+      "Author": "Downtown1 & Harry",
+      "Page": "https://github.com/fbef0102/L4D1_2-Plugins/tree/master/l4d_unreservelobby",
+      "Kind": "sourcemod",
+      "License": "GPL-3.0",
+      "NeedsConfig": true,
+      "Steps": [
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/fbef0102/L4D1_2-Plugins/master/l4d_unreservelobby/plugins/l4d_unreservelobby.smx",
+          "Dest": "addons/sourcemod/plugins/l4d_unreservelobby.smx",
+          "Comment": "Mantenuto da fbef0102 (lo stesso autore di Objects Spawner, gia' in catalogo), fork del thread AlliedModders originale (p846083, Downtown1 & Harry). Un solo file: nessuna traduzione allegata al repo."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/plugins/left4dhooks.smx",
+          "Dest": "addons/sourcemod/plugins/left4dhooks.smx",
+          "Comment": "Da qui in giu' e' Left4DHooks (SilvDev, v1.168, GPL-3.0): non e' un plugin scelto dall'utente, e' la dipendenza senza la quale questo plugin non parte. Stessi quattro passi gia' presenti nella voce di Objects Spawner: installare entrambi i plugin non duplica niente di dannoso, i file sono identici e SourceMod risolve le native al caricamento, non nell'ordine di arrivo. Finche' il catalogo non sa dichiarare le dipendenze, restano qui dentro; il giorno che lo sapra', questi quattro passi diventano una voce a se' e sia questo sia Objects Spawner la dichiarano."
+        },
+        {
+          "Type": "url",
+          "URL": "https://raw.githubusercontent.com/SilvDev/Left4DHooks/main/sourcemod/gamedata/left4dhooks.l4d2.txt",
+          "Dest": "addons/sourcemod/gamedata/left4dhooks.l4d2.txt",
+          "Comment": "Solo la variante l4d2. Senza gamedata il plugin carica e poi fallisce in silenzio."
         },
         {
           "Type": "url",
