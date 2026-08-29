@@ -91,7 +91,9 @@
           "Dest": "addons/sourcemod/plugins/l4d_afk_commands.smx",
           "Comment": "Pulsante 'Get Plugin' del thread dell'autore: l'allegato è il sorgente e questo endpoint ne restituisce lo .smx compilato (gli allegati di AlliedModders sono dietro Cloudflare, questo no). È la versione che spiega il tutorial. Il seguito mantenuto (fbef0102/l4d_afk_commands, v5.7) fa molto di più ma richiede left4dhooks e l'estensione Actions: sta in TODO come candidato per quando il catalogo saprà gestire le dipendenze."
         }
-      ]
+      ],
+      "License": "",
+      "Authorized": "TEST-NON-REALE"
     },
     {
       "Id": "weaponspawner",
@@ -224,7 +226,9 @@
           "Dest": "addons/sourcemod/translations/weaponspawner.phrases.txt",
           "Comment": "Il plugin chiama LoadTranslations(\"weaponspawner.phrases\") ma il file non è allegato al post: esiste solo in inglese, fermo al 2010. Questo lo abbiamo scritto noi in 4 lingue con le stesse chiavi."
         }
-      ]
+      ],
+      "License": "",
+      "Authorized": "TEST-NON-REALE"
     },
     {
       "Id": "spawnprops",
@@ -425,7 +429,9 @@
           "Extract": "game",
           "Comment": "L'archivio contiene già addons/l4dtoolz/ e addons/metamod/: si estrae nella cartella del gioco e ogni file va al suo posto. Fork mantenuto (ultimo aggiornamento 2026-07); l'originale ivailosp è fermo al 2017."
         }
-      ]
+      ],
+      "License": "",
+      "Authorized": "TEST-NON-REALE"
     },
     {
       "Id": "l4d_unreservelobby",
