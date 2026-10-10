@@ -1,0 +1,46 @@
+{
+  "Notices": [
+    {
+      "Id": 1,
+      "Date": "2026-10-10",
+      "Welcome": true,
+      "Title": {
+        "it": "Disegna il tuo MOTD nel browser",
+        "en": "Design your MOTD in the browser",
+        "de": "Gestalte dein MOTD im Browser",
+        "fr": "Dessine ton MOTD dans le navigateur",
+        "ru": "Создай свой MOTD в браузере",
+        "es": "Diseña tu MOTD en el navegador"
+      },
+      "Text": {
+        "it": "Un editor visuale con testi, immagini, tabelle e modelli pronti. Lo apri dal menu del server: Impostazioni server, MOTD e banner, Apri l'editor.",
+        "en": "A visual editor with texts, images, tables and ready-made templates. Open it from the server menu: Server settings, MOTD and banner, Open the editor.",
+        "de": "Ein visueller Editor mit Texten, Bildern, Tabellen und fertigen Vorlagen. Du öffnest ihn im Server-Menü unter den Einstellungen für MOTD und Banner.",
+        "fr": "Un éditeur visuel avec textes, images, tableaux et modèles prêts à l'emploi. Ouvre-le depuis le menu du serveur, dans les réglages du MOTD et de la bannière.",
+        "ru": "Визуальный редактор с текстами, картинками, таблицами и готовыми шаблонами. Открывается из меню сервера, в настройках MOTD и баннера.",
+        "es": "Un editor visual con textos, imágenes, tablas y plantillas ya hechas. Ábrelo desde el menú del servidor, en los ajustes del MOTD y del banner."
+      }
+    },
+    {
+      "Id": 2,
+      "Date": "2026-10-10",
+      "Welcome": true,
+      "Title": {
+        "it": "Quattro piani, e plugin rinnovati",
+        "en": "Four plans, and reworked plugins",
+        "de": "Vier Tarife und überarbeitete Plugins",
+        "fr": "Quatre formules, et des plugins revus",
+        "ru": "Четыре тарифа и обновлённые плагины",
+        "es": "Cuatro planes y plugins renovados"
+      },
+      "Text": {
+        "it": "Arriva lo Standard, fra Lite e Pro. E ogni plugin del catalogo ora porta con sé tutto quello che gli serve: lo installi e lo togli con un tasto.",
+        "en": "Standard is new, between Lite and Pro. And every plugin in the catalogue now brings along everything it needs: install it and remove it with one key.",
+        "de": "Standard ist neu, zwischen Lite und Pro. Und jedes Plugin im Katalog bringt jetzt alles mit, was es braucht: mit einer Taste installiert und entfernt.",
+        "fr": "Standard est nouvelle, entre Lite et Pro. Et chaque plugin du catalogue apporte désormais tout ce qu'il lui faut : une touche pour l'installer ou l'enlever.",
+        "ru": "Появился Standard, между Lite и Pro. А каждый плагин из каталога теперь приносит с собой всё нужное: установка и удаление одной клавишей.",
+        "es": "Llega Standard, entre Lite y Pro. Y cada plugin del catálogo trae ahora todo lo que necesita: se instala y se quita con una tecla."
+      }
+    }
+  ]
+}
