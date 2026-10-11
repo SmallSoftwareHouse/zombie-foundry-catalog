@@ -56,9 +56,19 @@ jobs:
                   if not e.get("Name"):
                       problems.append(f"{where}: missing Name")
 
+                  # A dependency is never offered in the list: the tool installs
+                  # it with the plugin that requires it, so it has no line to
+                  # describe itself in.
                   desc = e.get("Desc")
-                  if not isinstance(desc, dict) or not desc.get("en"):
+                  if not e.get("Dependency") and (not isinstance(desc, dict) or not desc.get("en")):
                       problems.append(f"{where}: Desc must be an object with at least \"en\"")
+
+                  requires = e.get("Requires")
+                  if requires is not None and (
+                      not isinstance(requires, list)
+                      or not all(isinstance(r, str) and r for r in requires)
+                  ):
+                      problems.append(f"{where}: Requires must be an array of ids")
 
                   # Usage e' la legenda dei comandi mostrata nel riquadro del
                   # tool. Non e' obbligatoria — un plugin governato solo da
@@ -115,6 +125,13 @@ jobs:
                       # Everything that is not an archive must say where it lands.
                       if not s.get("Extract") and not s.get("Dest"):
                           problems.append(f"{sw}: needs either Extract or Dest")
+
+              # A plugin that requires an entry the file does not have cannot
+              # be installed, and says so only at the end of the procedure.
+              for e in entries:
+                  for r in e.get("Requires") or []:
+                      if isinstance(r, str) and r not in seen:
+                          problems.append(f"{path}: {e.get('Id')!r} requires {r!r}, which is not in the catalogue")
 
           if problems:
               print("Catalogue rejected:\n")

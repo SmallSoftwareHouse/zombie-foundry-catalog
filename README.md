@@ -45,9 +45,15 @@ install time, exactly as a browser would.
       "Page": "https://…",                 // where the user can read about it
       "Kind": "metamod",                   // "sourcemod" (default) or "metamod"
       "NeedsConfig": true,                 // needs cvars set after installing
+      "Requires": ["left4dhooks"],         // optional: ids of the entries this
+                                           // one needs, installed with it
+      "Dependency": true,                  // optional: an entry that is never
+                                           // offered by itself, only installed
+                                           // for the plugins that require it
+                                           // (it has no Desc)
       "Steps": [                           // applied in order; first failure stops
         {
-          "Type": "github_release",        // github_release | url | asset
+          "Type": "github_release",        // github_release | url | asset | zip
           "Repo": "accelerator74/l4dtoolz",
           "AssetMatch": { "windows": "l4d2-win", "linux": "l4d2-linux" },
           "Extract": "game"                // unpack into the game folder
