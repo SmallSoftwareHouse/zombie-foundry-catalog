@@ -2,7 +2,7 @@
   "Notices": [
     {
       "Id": 2,
-      "Date": "2026-10-10",
+      "Date": "2026-10-11",
       "Welcome": true,
       "Title": {
         "it": "Disegna il tuo MOTD nel browser",
@@ -23,7 +23,7 @@
     },
     {
       "Id": 1,
-      "Date": "2026-10-10",
+      "Date": "2026-10-11",
       "Welcome": true,
       "Title": {
         "it": "Quattro piani, e plugin rinnovati",
