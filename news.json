@@ -1,24 +1,24 @@
 {
   "Notices": [
     {
-      "Id": 3,
-      "Date": "2026-10-11",
+      "Id": 4,
+      "Date": "2026-10-17",
       "Welcome": true,
       "Title": {
-        "it": "Quattro piani: il Pro di prima ora è Standard",
-        "en": "Four plans: the old Pro is now Standard",
-        "de": "Vier Tarife: das bisherige Pro heißt jetzt Standard",
-        "fr": "Quatre formules : l'ancien Pro devient Standard",
-        "ru": "Четыре тарифа: прежний Pro теперь Standard",
-        "es": "Cuatro planes: el Pro de antes ahora es Standard"
+        "it": "I plugin di Zombie Foundry",
+        "en": "Zombie Foundry plugins",
+        "de": "Die Plugins von Zombie Foundry",
+        "fr": "Les plugins de Zombie Foundry",
+        "ru": "Плагины Zombie Foundry",
+        "es": "Los plugins de Zombie Foundry"
       },
       "Text": {
-        "it": "Quello che si chiamava Pro ora è lo Standard: stesse funzioni, un server. In prova gratuita ora vedi Standard e non perdi niente. Chi ha comprato il Pro resta Pro, con fino a tre server.",
-        "en": "What was called Pro is now Standard: same features, one server. On the free trial you now see Standard and lose nothing. If you bought Pro you stay Pro, with up to three servers.",
-        "de": "Was bisher Pro hieß, ist jetzt Standard: gleiche Funktionen, ein Server. In der Testversion siehst du jetzt Standard und verlierst nichts. Wer Pro gekauft hat, bleibt Pro, mit bis zu drei Servern.",
-        "fr": "Ce qui s'appelait Pro est maintenant Standard : mêmes fonctions, un serveur. En essai gratuit tu vois désormais Standard et tu ne perds rien. Si tu as acheté Pro, tu restes Pro, avec jusqu'à trois serveurs.",
-        "ru": "То, что называлось Pro, теперь Standard: те же функции, один сервер. В пробной версии теперь показан Standard, и ничего не пропало. Кто купил Pro, остаётся на Pro: до трёх серверов.",
-        "es": "Lo que se llamaba Pro ahora es Standard: las mismas funciones, un servidor. En la prueba gratuita ahora ves Standard y no pierdes nada. Si compraste Pro, sigues en Pro, con hasta tres servidores."
+        "it": "Nuova scheda «ZF» nei plugin: Match Report, il riepilogo a fine round, e Tank Warning, che ti avvisa se rischi la pietra del Tank.",
+        "en": "New “ZF” tab in the plugins: Match Report, the end-of-round summary, and Tank Warning, which warns you when the Tank’s rock may hit you.",
+        "de": "Neuer Reiter „ZF“: Match Report, die Übersicht am Rundenende, und Tank Warning, das dich vor dem Stein des Tanks warnt.",
+        "fr": "Nouvel onglet « ZF » dans les plugins : Match Report, le bilan de manche, et Tank Warning, qui t’avertit si le rocher du Tank te vise.",
+        "ru": "Новая вкладка «ZF» в плагинах: Match Report — итоги в конце раунда, и Tank Warning — предупредит, если в тебя летит камень Танка.",
+        "es": "Nueva pestaña «ZF» en los plugins: Match Report, el resumen de la ronda, y Tank Warning, que te avisa si te va a dar la roca del Tank."
       }
     },
     {
